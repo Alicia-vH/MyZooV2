@@ -8,7 +8,7 @@ namespace MyZooV2.Classes.Canine
 {
 
     //Canines
-    public class Canine : Animal
+    abstract public class Canine : Animal
     {
         public override void Roam()
         {

@@ -2,6 +2,7 @@
 using MyZooV2.Classes.Canine;
 using MyZooV2.Classes.Hippo;
 using MyZooV2.Classes.Feline;
+using System.Globalization;
 
 namespace MyZooV2
 {
@@ -9,45 +10,32 @@ namespace MyZooV2
     {
         static void Main(string[] args)
         {
-            Animal animal = new Lion("Roar", "Meat");
-            animal.MakeNoise();
-            animal.Eat();
-            animal.Roam();
 
-            Console.WriteLine("---------------------");
+            List<Animal> animals = new List<Animal>()
+            {
 
-            animal = new Tiger("Another roar", "Meat");
-            animal.MakeNoise();
-            animal.Eat();
-            animal.Roam();
 
-            Console.WriteLine("---------------------");
+                new Lion("Roar", "Meat"),
+                new Tiger("Another Roar", "Meat"),
+                new Cat("Meow", "Cat food"),
 
-            animal = new Cat("Meow", "Cat food");
-            animal.MakeNoise();
-            animal.Eat();
-            animal.Roam();
+                new Wolf("Howl", "Meat"),
+                new Dog("Woof", "Dog biscuits"),
 
-            Console.WriteLine("---------------------");
+                new Hippo("Something loud", "Whatever"),
 
-            animal = new Wolf("Howl", "Meat");
-            animal.MakeNoise();
-            animal.Eat();
-            animal.Roam();
+            };
 
-            Console.WriteLine("---------------------");
+            foreach (Animal animal in animals)
+            {
+                animal.MakeNoise();
+                animal.Eat();
+                animal.Roam();
 
-            animal = new Dog("Woof", "Dog biscuits");
-            animal.MakeNoise();
-            animal.Eat();
-            animal.Roam();
+                Console.WriteLine("-----------------------");
+            }
 
-            Console.WriteLine("---------------------");
-
-            animal = new Hippo("Something", "smth");
-            animal.MakeNoise();
-            animal.Eat();
-            animal.Roam();
+          
         }
 
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyZooV2.Classes.Feline
 {
     //Felines
-    public class Feline : Animal
+    abstract public class Feline : Animal
     {
         public override void Roam()
         {
